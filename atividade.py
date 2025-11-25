@@ -32,7 +32,7 @@ if opcao == "1":
 
             print("Personagem cadastrado com sucesso!")
 
-            elif opcao == "2":
+elif opcao == "2":
         if len(cadastro) == 0:
             print("Nenhum personagem cadastrado.")
         else:
@@ -44,3 +44,26 @@ if opcao == "1":
                 print(f"Nível: {dados['nivel']}")
                 print(f"Vida: {dados['vida']}")
                 print(f"Mana: {dados['mana']}")
+
+elif opcao == "3":
+        codigo = input("Digite o código que deseja atualizar: ")
+
+        if codigo not in cadastro:
+            print("Código não encontrado.")
+        else:
+            print("Digite os novos dados:")
+            nome = input("Nome: ")
+            classe = input("Classe: ")
+            nivel = input("Nível: ")
+            vida = input("Vida: ")
+            mana = input("Mana: ")
+
+            cadastro[codigo] = {
+                "nome": nome,
+                "classe": classe,
+                "nivel": nivel,
+                "vida": vida,
+                "mana": mana
+            }
+
+            print("Personagem atualizado!")
