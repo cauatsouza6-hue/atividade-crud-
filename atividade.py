@@ -67,3 +67,12 @@ elif opcao == "3":
             }
 
             print("Personagem atualizado!")
+
+elif opcao == "4":
+        codigo = input("Código do personagem que deseja remover: ")
+
+        if codigo in cadastro:
+            del cadastro[codigo]
+            print("Personagem removido!")
+        else:
+            print("Código não encontrado.")
