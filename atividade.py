@@ -31,3 +31,16 @@ if opcao == "1":
             }
 
             print("Personagem cadastrado com sucesso!")
+
+            elif opcao == "2":
+        if len(cadastro) == 0:
+            print("Nenhum personagem cadastrado.")
+        else:
+            print("\n=== LISTA DE PERSONAGENS ===")
+            for codigo, dados in cadastro.items():
+                print(f"\nCódigo: {codigo}")
+                print(f"Nome: {dados['nome']}")
+                print(f"Classe: {dados['classe']}")
+                print(f"Nível: {dados['nivel']}")
+                print(f"Vida: {dados['vida']}")
+                print(f"Mana: {dados['mana']}")
